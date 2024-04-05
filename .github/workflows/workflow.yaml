@@ -23,3 +23,5 @@ jobs:
         curl -I https://www.globo.com
     - name: Número randômico    
       run: echo $RANDOM
+    - name: Data de hoje
+      run: date
