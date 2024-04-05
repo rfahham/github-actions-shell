@@ -1,0 +1,16 @@
+name: Continuos Integration
+
+# on: [pull_request, push, issues, issue_comment]
+on: push
+
+jobs:
+  continuos-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Hello World !!!
+      run: |
+      echo "Hello World !!!"
+    - name: Print IPv4 # Some random command
+      run: ifconfig -a
