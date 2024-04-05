@@ -10,7 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Hello World !!!
-      run: |
-      echo "Hello World !!!"
+      run: echo "Hello World !!!"
     - name: Print IPv4 # Some random command
       run: ifconfig -a
