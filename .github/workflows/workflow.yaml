@@ -1,7 +1,8 @@
 name: Continuos Integration
 
-# on: [pull_request, push, issues, issue_comment]
-on: push
+# on: [pull_requests, push, issues, issue_comment]
+# on: push
+on: pull_requests
 
 jobs:
   continuos-integration:
