@@ -13,3 +13,8 @@ jobs:
       run: echo "Hello World !!!"
     - name: Print IPv4 # Some random command
       run: ifconfig -a
+    - name: curl www.globo.com
+      run: |
+        sudo apt-get update
+        sudo apt-get install curl
+        curl -I https://www.globo.com
