@@ -21,5 +21,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install curl
         curl -I https://www.globo.com
+        echo $RANDOM
         echo A comment on PR $NUMBER
-        $RAMDOM
+        env:
+          NUMBER: ${{ github.event.issue.number }}
