@@ -16,11 +16,14 @@ jobs:
       run: echo "Hello World !!!"
     - name: Print IPv4 # Some random command
       run: ifconfig -a
+    - name: Versão do Ubuntu
+      run: cat /etc/os-release
+    - name: atualizando pacotes
+      run: sudo apt-get update
+    - name: Instalando CURL
+      run: sudo apt-get install curl
     - name: curl www.globo.com
-      run: |
-        sudo apt-get update
-        sudo apt-get install curl
-        curl -I https://www.globo.com
+      run: curl -I https://www.globo.com
     - name: Número randômico    
       run: echo $RANDOM
     - name: Data de hoje
