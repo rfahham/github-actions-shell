@@ -1,7 +1,10 @@
 name: Continuos Integration
 
 # on: [pull_request, push, issues, issue_comment]
-on: push
+# on: push
+on: 
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   continuos-integration:
@@ -18,3 +21,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install curl
         curl -I https://www.globo.com
+    - name: Número randômico    
+      run: echo $RANDOM
+    - name: Data de hoje
+      run: date
